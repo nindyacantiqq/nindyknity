@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KStudio — modern knitwear with a soft pastel aesthetic.">
+  <title>KStudio — Knitwear & Everyday Essentials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#home" class="logo">K<span>Studio</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#shop" data-i18n="nav.shop">Shop</a>
+      <a href="#promo" data-i18n="nav.promo">Promo</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+      <button class="lang-btn active" data-lang="id">ID</button>
+      <span>/</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="icon-btn cart-button" id="cartBtn" aria-label="Shopping cart">
+        ♡ <b id="cartCount">0</b>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <input id="searchInput" type="search" placeholder="Cari knitwear favoritmu..." data-i18n-placeholder="search.placeholder">
+    <button id="closeSearch">×</button>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">SOFT • SIMPLE • YOURS</p>
+        <h1 data-i18n="hero.title">Knitwear that<br><em>feels like you.</em></h1>
+        <p class="hero-text" data-i18n="hero.text">Knitwear minimalis dengan warna lembut untuk menemani hari-harimu.</p>
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-dark" data-i18n="hero.cta">Shop Collection →</a>
+          <a href="#about" class="text-link" data-i18n="hero.more">Explore KStudio</a>
+        </div>
+        <div class="hero-note">
+          <span>✦</span>
+          <span data-i18n="hero.note">Designed for everyday moments</span>
+        </div>
+      </div>
+
+      <div class="hero-slider">
+        <div class="slides" id="slides">
+          <article class="slide active">
+            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85" alt="Knitwear collection">
+            <div class="slide-label">01 / 05</div>
+          </article>
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=1200&q=85" alt="Soft knitwear">
+            <div class="slide-label">02 / 05</div>
+          </article>
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1608234807905-4466023792f5?auto=format&fit=crop&w=1200&q=85" alt="Casual knit outfit">
+            <div class="slide-label">03 / 05</div>
+          </article>
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1583743814966-8936f37f4678?auto=format&fit=crop&w=1200&q=85" alt="Minimal fashion">
+            <div class="slide-label">04 / 05</div>
+          </article>
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=1200&q=85" alt="Cozy fashion">
+            <div class="slide-label">05 / 05</div>
+          </article>
+        </div>
+        <div class="slider-controls">
+          <button id="prevSlide">←</button>
+          <div class="dots" id="dots"></div>
+          <button id="nextSlide">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <span>NEW SEASON</span><i>✦</i><span>SOFT KNITWEAR</span><i>✦</i><span>MADE FOR YOU</span><i>✦</i><span>NEW SEASON</span>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="shop.eyebrow">THE EDIT</p>
+          <h2 data-i18n="shop.title">Knitwear you’ll want<br>to live in.</h2>
+        </div>
+        <p data-i18n="shop.desc">Potongan clean, tekstur cozy, dan palet pastel yang gampang dipadukan.</p>
+      </div>
+
+      <div class="category-row">
+        <button class="category active" data-filter="all" data-i18n="cat.all">All</button>
+        <button class="category" data-filter="cardigan" data-i18n="cat.cardigan">Cardigan</button>
+        <button class="category" data-filter="sweater" data-i18n="cat.sweater">Sweater</button>
+        <button class="category" data-filter="vest" data-i18n="cat.vest">Knit Vest</button>
+        <button class="category" data-filter="set" data-i18n="cat.set">Knit Set</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promo" id="promo">
+      <div>
+        <p class="eyebrow">KSTUDIO SPECIAL</p>
+        <h2 data-i18n="promo.title">Soft days,<br>special prices.</h2>
+        <p data-i18n="promo.text">Dapatkan diskon hingga 20% untuk koleksi pilihan minggu ini.</p>
+        <a href="#shop" class="btn btn-dark" data-i18n="promo.cta">Shop Promo →</a>
+      </div>
+      <div class="promo-mark">K<br>✦<br>S</div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=85" alt="KStudio fashion">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow" data-i18n="about.eyebrow">OUR STORY</p>
+        <h2 data-i18n="about.title">Less noise.<br>More <em>you.</em></h2>
+        <p data-i18n="about.text">KStudio hadir untuk membuat knitwear yang terasa effortless. Kami percaya pakaian yang bagus tidak harus ramai—cukup nyaman, timeless, dan punya karakter.</p>
+        <div class="values">
+          <div><strong>01</strong><span data-i18n="about.v1">Soft & comfy</span></div>
+          <div><strong>02</strong><span data-i18n="about.v2">Easy to style</span></div>
+          <div><strong>03</strong><span data-i18n="about.v3">Made for everyday</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <p class="eyebrow">STAY IN THE LOOP</p>
+      <h2 data-i18n="newsletter.title">Get the soft updates.</h2>
+      <p data-i18n="newsletter.text">Promo, new drops, dan cerita KStudio langsung ke inbox kamu.</p>
+      <form id="newsletterForm">
+        <input type="email" required placeholder="Email kamu" data-i18n-placeholder="newsletter.placeholder">
+        <button class="btn btn-dark" data-i18n="newsletter.button">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <a href="#home" class="logo">K<span>Studio</span></a>
+      <p data-i18n="footer.tag">Soft knitwear for your everyday story.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#shop" data-i18n="nav.shop">Shop</a>
+      <a href="#promo" data-i18n="nav.promo">Promo</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="copyright">© 2026 KStudio. All rights reserved.</div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head">
+      <h3 data-i18n="cart.title">Your Bag</h3>
+      <button id="closeCart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div><span data-i18n="cart.total">Total</span><strong id="cartTotal">Rp0</strong></div>
+      <button id="checkoutBtn" class="btn btn-dark full" data-i18n="cart.checkout">Checkout via WhatsApp</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <a class="wa-float" href="https://wa.me/6285219577704?text=Halo%20kak%20aku%20mau%20pesan%20baju%20....%205%20pack%20ya" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <span>WhatsApp</span> <b>↗</b>
+  </a>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
