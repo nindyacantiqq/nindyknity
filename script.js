@@ -1,9 +1,9 @@
 const slides=[
-"https://images.unsplash.com/photo-1589810635657-232948472d98?auto=format&fit=crop&w=1200&q=85",
-"https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=1200&q=85",
-"https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1200&q=85",
-"https://images.unsplash.com/photo-1578932750294-f5075e85f44a?auto=format&fit=crop&w=1200&q=85",
-"https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85"
+"https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85",
+"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85",
+"https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85",
+"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85",
+"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85"
 ];
 const products=[
 {id:1,name:"Safa Gamis",type:"gamis",price:289000,img:slides[0],tag:"NEW"},
@@ -11,9 +11,9 @@ const products=[
 {id:3,name:"Noura Tunik",type:"tunik",price:199000,img:slides[2],tag:"NEW"},
 {id:4,name:"Maira Set",type:"set",price:329000,img:slides[3],tag:"20% OFF"},
 {id:5,name:"Luna Gamis",type:"gamis",price:299000,img:slides[4],tag:""},
-{id:6,name:"Cloud Pashmina",type:"hijab",price:89000,img:"https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=800&q=85",tag:"BEST"},
-{id:7,name:"Sage Tunik",type:"tunik",price:189000,img:"https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=800&q=85",tag:""},
-{id:8,name:"Ayla Modest Set",type:"set",price:319000,img:"https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=85",tag:"NEW"}
+{id:6,name:"Cloud Pashmina",type:"hijab",price:89000,img:slides[0],tag:"BEST"},
+{id:7,name:"Sage Tunik",type:"tunik",price:189000,img:slides[3],tag:""},
+{id:8,name:"Ayla Modest Set",type:"set",price:319000,img:slides[1],tag:"NEW"}
 ];
 let slideIndex=0,cart=JSON.parse(localStorage.getItem("nindyknity-cart")||"[]"),currentFilter="all";
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
