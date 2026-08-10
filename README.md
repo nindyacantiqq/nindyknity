@@ -1,30 +1,17 @@
-# KStudio Landing Page
+KSTUDIO FIXED — GitHub Pages ready
 
-Landing page e-commerce modern minimalis untuk KStudio, dengan nuansa pastel dan fokus knitwear.
+Upload ALL FOUR files directly into the ROOT of your GitHub repository:
+- index.html
+- style.css
+- script.js
+- README.md
 
-## Fitur
-- Responsive desktop/tablet/mobile
-- Hero slider 5 gambar
-- Bahasa Indonesia / English
-- Search produk
-- Filter kategori
-- Shopping cart dengan localStorage
-- Checkout via WhatsApp
-- Floating WhatsApp button
-- Menu Home, Shop, Promo, About, Contact
-- Newsletter form
-- Foto sementara menggunakan hotlink Unsplash
+IMPORTANT:
+Do NOT put the files inside another KStudio folder.
 
-## Cara menjalankan
-1. Extract ZIP.
-2. Buka `index.html` di browser.
-3. Tidak membutuhkan server untuk fitur dasar.
+GitHub Pages:
+Settings → Pages → Deploy from a branch → main → /(root) → Save.
 
-## WhatsApp
-Nomor: +6285219577704
-
-Template floating chat:
-"Halo kak aku mau pesan baju .... 5 pack ya"
-
-## Catatan gambar
-Gambar demo berasal dari URL gambar Unsplash dan dapat diganti kapan saja dengan foto produk KStudio sendiri.
+The page is built so it does not depend on local assets. Images use Unsplash hotlinks.
+WhatsApp: +6285219577704
+Floating message: Halo kak aku mau pesan baju .... 5 pack ya
