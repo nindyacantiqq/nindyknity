@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KStudio — contemporary fashion with a soft pastel aesthetic.">
+  <title>KStudio — Contemporary Fashion</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="topbar" data-i18n="topbar">FREE SHIPPING · NEW DROP IS HERE ✦</div>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="#home" class="brand">K<span>STUDIO</span></a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#shop" data-i18n="navShop">Shop</a>
+        <a href="#new" data-i18n="navNew">New In</a>
+        <a href="#promo" data-i18n="navPromo">Promo</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-icon" id="searchOpen" aria-label="Search">⌕</button>
+
+        <div class="language">
+          <button id="languageBtn" class="language-btn">ID <span>⌄</span></button>
+          <div class="language-menu" id="languageMenu">
+            <button data-lang="id">Bahasa Indonesia</button>
+            <button data-lang="en">English</button>
+          </div>
+        </div>
+
+        <button class="nav-icon bag-button" id="bagButton" aria-label="Shopping bag">
+          ♡ <b id="bagCount">0</b>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <!-- HERO / SLIDER -->
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">KSTUDIO / NEW SEASON</p>
+        <h1 data-i18n="heroTitle">Wear your<br><em>soft side.</em></h1>
+        <p class="hero-description" data-i18n="heroText">
+          Fashion kekinian dengan warna pastel, siluet effortless, dan pieces
+          yang gampang dipadukan untuk everyday look kamu.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#shop" class="button dark" data-i18n="shopNow">Shop now ↗</a>
+          <a href="#about" class="under-link" data-i18n="discover">Discover KStudio</a>
+        </div>
+
+        <div class="hero-meta">
+          <span>01</span>
+          <div class="progress"><i id="sliderProgress"></i></div>
+          <span>05</span>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div class="slides" id="slides">
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" alt="Fashion look 1">
+            <div class="slide-label"><small>01 / EDIT 01</small><strong>Everyday<br>Essential</strong></div>
+          </article>
+
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85" alt="Fashion look 2">
+            <div class="slide-label"><small>02 / EDIT 02</small><strong>Soft<br>Statement</strong></div>
+          </article>
+
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85" alt="Fashion look 3">
+            <div class="slide-label"><small>03 / EDIT 03</small><strong>Weekend<br>Mood</strong></div>
+          </article>
+
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85" alt="Fashion look 4">
+            <div class="slide-label"><small>04 / EDIT 04</small><strong>Pastel<br>Layers</strong></div>
+          </article>
+
+          <article class="slide">
+            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=85" alt="Fashion look 5">
+            <div class="slide-label"><small>05 / EDIT 05</small><strong>Daily<br>Chic</strong></div>
+          </article>
+        </div>
+
+        <button class="slider-arrow prev" id="prevSlide" aria-label="Previous">←</button>
+        <button class="slider-arrow next" id="nextSlide" aria-label="Next">→</button>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div>
+        KSTUDIO ✦ SOFT COLORS ✦ MODERN SILHOUETTES ✦ EVERYDAY FASHION ✦ KSTUDIO ✦ SOFT COLORS ✦ MODERN SILHOUETTES ✦
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section container" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" data-i18n="shopEyebrow">SHOP THE EDIT</p>
+          <h2 data-i18n="shopTitle">Pieces you'll<br><em>keep reaching for.</em></h2>
+        </div>
+        <a href="#shop" class="under-link" data-i18n="viewAll">View all ↗</a>
+      </div>
+
+      <div class="products">
+        <article class="product" data-name="Cloud Cardigan" data-price="329000">
+          <div class="product-image p-pink">
+            <span class="tag" data-i18n="newTag">NEW</span>
+            <div class="fashion-shape cardigan-shape"></div>
+            <button class="add-cart" data-i18n="addBag">+ Add to bag</button>
+          </div>
+          <div class="product-info">
+            <div><h3>Cloud Cardigan</h3><p>Soft pink · Knit</p></div>
+            <strong>Rp329K</strong>
+          </div>
+        </article>
+
+        <article class="product" data-name="Misty Blouse" data-price="299000">
+          <div class="product-image p-blue">
+            <span class="tag">BESTSELLER</span>
+            <div class="fashion-shape blouse-shape"></div>
+            <button class="add-cart" data-i18n="addBag">+ Add to bag</button>
+          </div>
+          <div class="product-info">
+            <div><h3>Misty Blouse</h3><p>Powder blue · Relaxed</p></div>
+            <strong>Rp299K</strong>
+          </div>
+        </article>
+
+        <article class="product" data-name="Creamy Knit Vest" data-price="279000">
+          <div class="product-image p-cream">
+            <div class="fashion-shape vest-shape"></div>
+            <button class="add-cart" data-i18n="addBag">+ Add to bag</button>
+          </div>
+          <div class="product-info">
+            <div><h3>Creamy Knit Vest</h3><p>Vanilla · Layering</p></div>
+            <strong>Rp279K</strong>
+          </div>
+        </article>
+
+        <article class="product" data-name="Rose Mini Skirt" data-price="289000">
+          <div class="product-image p-lilac">
+            <div class="fashion-shape skirt-shape"></div>
+            <button class="add-cart" data-i18n="addBag">+ Add to bag</button>
+          </div>
+          <div class="product-info">
+            <div><h3>Rose Mini Skirt</h3><p>Dusty rose · Everyday</p></div>
+            <strong>Rp289K</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROMO -->
+    <section class="promo container" id="promo">
+      <div class="promo-card">
+        <div>
+          <p class="eyebrow" data-i18n="promoEyebrow">KSTUDIO SPECIAL</p>
+          <h2 data-i18n="promoTitle">Soft sale,<br><em>sweet deal.</em></h2>
+          <p data-i18n="promoText">Get 15% off your first order. Because you deserve a little something new.</p>
+          <a href="#shop" class="button dark" data-i18n="shopPromo">Shop promo ↗</a>
+        </div>
+        <div class="promo-number">15<span>%</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about container" id="about">
+      <div class="about-art">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="about-card">K<br><small>STUDIO</small></div>
+        <span class="floating-word">made to<br><em>feel good.</em></span>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow" data-i18n="aboutEyebrow">ABOUT KSTUDIO</p>
+        <h2 data-i18n="aboutTitle">Not just clothes.<br><em>It's a mood.</em></h2>
+        <p data-i18n="aboutText1">
+          KStudio hadir untuk kamu yang suka tampil stylish tanpa terasa terlalu effort.
+          Kami menggabungkan warna pastel, potongan modern, dan detail playful dalam
+          koleksi yang nyaman dipakai sehari-hari.
+        </p>
+        <p data-i18n="aboutText2">
+          Simple enough for every day. Special enough to feel like you.
+        </p>
+        <a href="#contact" class="under-link" data-i18n="readStory">Read our story ↗</a>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="container feature-grid">
+        <div><span>01</span><strong data-i18n="feature1Title">Curated styles</strong><p data-i18n="feature1Text">Pieces yang dipilih untuk wardrobe modern.</p></div>
+        <div><span>02</span><strong data-i18n="feature2Title">Pastel palette</strong><p data-i18n="feature2Text">Soft colors yang mudah dipadukan.</p></div>
+        <div><span>03</span><strong data-i18n="feature3Title">Easy shopping</strong><p data-i18n="feature3Text">Order cepat langsung lewat WhatsApp.</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact container" id="contact">
+      <p class="eyebrow" data-i18n="contactEyebrow">LET'S TALK</p>
+      <h2 data-i18n="contactTitle">Need help choosing<br><em>your next look?</em></h2>
+      <p data-i18n="contactText">Chat dengan KStudio untuk tanya ukuran, warna, stok, atau rekomendasi outfit.</p>
+      <a class="button dark" href="https://wa.me/6285219577704?text=Halo%20kak%20aku%20mau%20pesan%20baju%20....%205%20ya" target="_blank" rel="noopener">
+        WhatsApp KStudio ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#home">K<span>STUDIO</span></a>
+        <p data-i18n="footerText">Contemporary fashion, soft pastel mood.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerExplore">Explore</h4>
+        <a href="#shop" data-i18n="navShop">Shop</a>
+        <a href="#new" data-i18n="navNew">New In</a>
+        <a href="#promo" data-i18n="navPromo">Promo</a>
+      </div>
+      <div>
+        <h4 data-i18n="footerHelp">Help</h4>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="https://wa.me/6285219577704" target="_blank" rel="noopener">WhatsApp ↗</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">© 2026 KSTUDIO · made for your everyday mood ✦</div>
+  </footer>
+
+  <!-- SEARCH -->
+  <div class="overlay" id="searchOverlay">
+    <div class="search-modal">
+      <button class="close" id="searchClose">×</button>
+      <p class="eyebrow" data-i18n="searchEyebrow">SEARCH KSTUDIO</p>
+      <input id="searchInput" type="search" placeholder="Search cardigan, blouse..." data-i18n-placeholder="searchPlaceholder">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- BAG -->
+  <div class="overlay" id="bagOverlay">
+    <div class="bag-modal">
+      <button class="close" id="bagClose">×</button>
+      <p class="eyebrow">YOUR BAG</p>
+      <h2><em id="bagItemsText">0 items</em></h2>
+      <div id="bagList" class="bag-list"></div>
+      <a id="checkoutLink" class="button dark checkout" target="_blank" rel="noopener" href="https://wa.me/6285219577704?text=Halo%20kak%20aku%20mau%20pesan%20baju%20....%205%20ya">
+        Checkout via WhatsApp ↗
+      </a>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="wa-float" href="https://wa.me/6285219577704?text=Halo%20kak%20aku%20mau%20pesan%20baju%20....%205%20ya" target="_blank" rel="noopener" aria-label="Chat WhatsApp KStudio">
+    <span class="wa-icon">◔</span>
+    <span class="wa-label" data-i18n="chatUs">Chat us</span>
+  </a>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
