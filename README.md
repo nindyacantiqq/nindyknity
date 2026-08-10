@@ -1,17 +1,36 @@
-KSTUDIO FIXED — GitHub Pages ready
+# nindyknity — GitHub Pages Ready
 
-Upload ALL FOUR files directly into the ROOT of your GitHub repository:
+Landing page toko kerudung & baju muslimah.
+
+Files:
 - index.html
 - style.css
 - script.js
-- README.md
 
-IMPORTANT:
-Do NOT put the files inside another KStudio folder.
+## GitHub Pages
+Upload ketiga file tersebut langsung ke ROOT repository:
+repository/
+  index.html
+  style.css
+  script.js
 
-GitHub Pages:
+Jangan masukkan ketiganya ke dalam subfolder jika menggunakan `/ (root)` sebagai Pages source.
+
 Settings → Pages → Deploy from a branch → main → /(root) → Save.
 
-The page is built so it does not depend on local assets. Images use Unsplash hotlinks.
+## Fitur
+- Responsive
+- Slider 5 gambar
+- ID / English
+- Search
+- Filter kategori
+- Shopping cart + localStorage
+- Checkout WhatsApp
+- Floating WhatsApp
+- Home, Collection, Promo, About, Contact
+- Demo images via Unsplash hotlink
+
 WhatsApp: +6285219577704
-Floating message: Halo kak aku mau pesan baju .... 5 pack ya
+Floating template: Halo kak aku mau pesan gamis .... 5 pack ya
+
+Catatan: foto demo dari Unsplash hanya untuk sementara. Untuk toko publik, sebaiknya ganti dengan foto produk sendiri atau aset yang lisensinya sudah kamu pastikan.

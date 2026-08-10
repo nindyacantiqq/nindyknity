@@ -1,74 +1,135 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KStudio — Knitwear</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NindyKnity — kerudung dan fashion muslimah modern dengan sentuhan pastel.">
+  <title>NindyKnity — Modest Wear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<header class="header">
-  <a class="logo" href="#home">K<span>Studio</span></a>
-  <nav id="nav">
-    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#promo">Promo</a>
-    <a href="#about">About</a><a href="#contact">Contact</a>
-  </nav>
-  <div class="actions">
-    <button id="searchBtn">⌕</button>
-    <button class="lang active" data-lang="id">ID</button><small>/</small><button class="lang" data-lang="en">EN</button>
-    <button id="cartBtn" class="cart">♡<b id="cartCount">0</b></button>
-    <button id="menuBtn" class="menu">☰</button>
+  <header class="header">
+    <a class="logo" href="#home">nindy<span>knity</span></a>
+    <nav id="nav">
+      <a href="#home" data-id="Beranda" data-en="Home">Beranda</a>
+      <a href="#shop" data-id="Koleksi" data-en="Collection">Koleksi</a>
+      <a href="#promo" data-id="Promo" data-en="Promo">Promo</a>
+      <a href="#about" data-id="Tentang" data-en="About">Tentang</a>
+      <a href="#contact" data-id="Kontak" data-en="Contact">Kontak</a>
+    </nav>
+    <div class="actions">
+      <button id="searchBtn" aria-label="Search">⌕</button>
+      <button class="lang active" data-lang="id">ID</button><span>/</span><button class="lang" data-lang="en">EN</button>
+      <button id="cartBtn" class="cart" aria-label="Shopping cart">♡<b id="cartCount">0</b></button>
+      <button id="menuBtn" class="menu" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <input id="searchInput" type="search" placeholder="Cari gamis, kerudung..." data-id-placeholder="Cari gamis, kerudung..." data-en-placeholder="Search dresses, hijabs...">
+    <button id="closeSearch">×</button>
   </div>
-</header>
 
-<div id="searchPanel" class="search-panel">
-  <input id="searchInput" placeholder="Cari knitwear favoritmu...">
-  <button id="closeSearch">×</button>
-</div>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-id="MODEST • SOFT • YOURS" data-en="MODEST • SOFT • YOURS">MODEST • SOFT • YOURS</p>
+        <h1 data-id="Elegance that<br><em>feels like home.</em>" data-en="Elegance that<br><em>feels like home.</em>">Elegance that<br><em>feels like home.</em></h1>
+        <p class="lead" data-id="Kerudung dan baju muslimah dengan desain clean, warna lembut, dan nyaman dipakai setiap hari." data-en="Modern modest wear with clean silhouettes, soft colors, and everyday comfort.">Kerudung dan baju muslimah dengan desain clean, warna lembut, dan nyaman dipakai setiap hari.</p>
+        <div class="hero-buttons">
+          <a class="btn dark" href="#shop" data-id="Lihat Koleksi →" data-en="Shop Collection →">Lihat Koleksi →</a>
+          <a class="under" href="#about" data-id="Kenal NindyKnity" data-en="Meet NindyKnity">Kenal NindyKnity</a>
+        </div>
+        <p class="note">✦ <span data-id="Made for your everyday story" data-en="Made for your everyday story">Made for your everyday story</span></p>
+      </div>
 
-<main>
-<section id="home" class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">SOFT • SIMPLE • YOURS</p>
-    <h1>Knitwear that<br><em>feels like you.</em></h1>
-    <p class="lead">Knitwear minimalis dengan warna lembut untuk menemani hari-harimu.</p>
-    <div class="hero-actions"><a class="btn dark" href="#shop">Shop Collection →</a><a class="under" href="#about">Explore KStudio</a></div>
-    <p class="note">✦ Designed for everyday moments</p>
-  </div>
-  <div class="slider-wrap">
-    <div class="slider" id="slider"></div>
-    <div class="slider-controls"><button id="prev">←</button><div id="dots"></div><button id="next">→</button></div>
-  </div>
-</section>
+      <div class="slider-wrap">
+        <div class="slider" id="slider"></div>
+        <div class="slider-controls">
+          <button id="prev">←</button>
+          <div id="dots"></div>
+          <button id="next">→</button>
+        </div>
+      </div>
+    </section>
 
-<div class="ticker"><span>NEW SEASON</span><i>✦</i><span>SOFT KNITWEAR</span><i>✦</i><span>MADE FOR YOU</span><i>✦</i></div>
+    <div class="ticker">
+      <span>MODEST ESSENTIALS</span><i>✦</i><span>SOFT PALETTE</span><i>✦</i><span>EVERYDAY ELEGANCE</span><i>✦</i>
+    </div>
 
-<section id="shop" class="section">
-  <div class="section-head"><div><p class="eyebrow">THE EDIT</p><h2>Knitwear you’ll want<br>to live in.</h2></div><p>Potongan clean, tekstur cozy, dan palet pastel yang gampang dipadukan.</p></div>
-  <div class="filters">
-    <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="cardigan">Cardigan</button>
-    <button class="filter" data-filter="sweater">Sweater</button><button class="filter" data-filter="vest">Knit Vest</button><button class="filter" data-filter="set">Knit Set</button>
-  </div>
-  <div id="products" class="products"></div>
-</section>
+    <section class="section" id="shop">
+      <div class="section-head">
+        <div><p class="eyebrow" data-id="THE EDIT" data-en="THE EDIT">THE EDIT</p><h2 data-id="Pieces you'll<br>reach for daily." data-en="Pieces you'll<br>reach for daily.">Pieces you'll<br>reach for daily.</h2></div>
+        <p data-id="Gamis, tunik, hijab, dan modest essentials dalam palet warna pastel yang mudah dipadukan." data-en="Dresses, tunics, hijabs, and modest essentials in easy-to-style pastel tones.">Gamis, tunik, hijab, dan modest essentials dalam palet warna pastel yang mudah dipadukan.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="gamis">Gamis</button>
+        <button class="filter" data-filter="hijab">Hijab</button>
+        <button class="filter" data-filter="tunik">Tunik</button>
+        <button class="filter" data-filter="set">Set</button>
+      </div>
+      <div id="products" class="products"></div>
+    </section>
 
-<section id="promo" class="promo"><div><p class="eyebrow">KSTUDIO SPECIAL</p><h2>Soft days,<br>special prices.</h2><p>Dapatkan diskon hingga 20% untuk koleksi pilihan minggu ini.</p><a class="btn dark" href="#shop">Shop Promo →</a></div><div class="mark">K<br>✦<br>S</div></section>
+    <section class="promo" id="promo">
+      <div>
+        <p class="eyebrow">NINDYKNITY SPECIAL</p>
+        <h2 data-id="Soft look,<br>special price." data-en="Soft look,<br>special price.">Soft look,<br>special price.</h2>
+        <p data-id="Nikmati diskon hingga 20% untuk pilihan modest wear minggu ini." data-en="Enjoy up to 20% off selected modest wear this week.">Nikmati diskon hingga 20% untuk pilihan modest wear minggu ini.</p>
+        <a class="btn dark" href="#shop" data-id="Lihat Promo →" data-en="Shop Promo →">Lihat Promo →</a>
+      </div>
+      <div class="mark">N<br>✦<br>K</div>
+    </section>
 
-<section id="about" class="about section">
-  <div class="about-img"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="KStudio fashion"></div>
-  <div><p class="eyebrow">OUR STORY</p><h2>Less noise.<br>More <em>you.</em></h2><p class="about-text">KStudio hadir untuk membuat knitwear yang terasa effortless. Kami percaya pakaian yang bagus tidak harus ramai—cukup nyaman, timeless, dan punya karakter.</p>
-  <div class="values"><div><b>01</b>Soft & comfy</div><div><b>02</b>Easy to style</div><div><b>03</b>Made for everyday</div></div></div>
-</section>
+    <section class="about section" id="about">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1589810635657-232948472d98?auto=format&fit=crop&w=1000&q=85" alt="Modest fashion">
+      </div>
+      <div>
+        <p class="eyebrow" data-id="OUR STORY" data-en="OUR STORY">OUR STORY</p>
+        <h2 data-id="Simple.<br>Graceful.<br><em>You.</em>" data-en="Simple.<br>Graceful.<br><em>You.</em>">Simple.<br>Graceful.<br><em>You.</em></h2>
+        <p class="about-text" data-id="NindyKnity dibuat untuk kamu yang ingin tampil modest tanpa kehilangan karakter. Kami memilih desain yang timeless, warna yang calming, dan detail yang terasa personal." data-en="NindyKnity is made for women who want modest style without losing their personality. Timeless silhouettes, calming colors, and thoughtful details come together for everyday wear.">NindyKnity dibuat untuk kamu yang ingin tampil modest tanpa kehilangan karakter. Kami memilih desain yang timeless, warna yang calming, dan detail yang terasa personal.</p>
+        <div class="values">
+          <div><b>01</b><span data-id="Nyaman dipakai" data-en="Everyday comfort">Nyaman dipakai</span></div>
+          <div><b>02</b><span data-id="Mudah dipadukan" data-en="Easy to style">Mudah dipadukan</span></div>
+          <div><b>03</b><span data-id="Detail yang timeless" data-en="Timeless details">Detail yang timeless</span></div>
+        </div>
+      </div>
+    </section>
 
-<section id="contact" class="newsletter"><p class="eyebrow">STAY IN THE LOOP</p><h2>Get the soft updates.</h2><p>Promo, new drops, dan cerita KStudio langsung ke inbox kamu.</p><form id="newsletter"><input type="email" required placeholder="Email kamu"><button class="btn dark">Subscribe</button></form></section>
-</main>
+    <section class="newsletter" id="contact">
+      <p class="eyebrow">STAY IN THE LOOP</p>
+      <h2 data-id="A little note<br>from NindyKnity." data-en="A little note<br>from NindyKnity.">A little note<br>from NindyKnity.</h2>
+      <p data-id="Dapatkan info new arrival, promo, dan koleksi terbaru langsung ke email kamu." data-en="Get new arrivals, promos, and collection updates straight to your inbox.">Dapatkan info new arrival, promo, dan koleksi terbaru langsung ke email kamu.</p>
+      <form id="newsletter">
+        <input type="email" required placeholder="Email kamu" data-id-placeholder="Email kamu" data-en-placeholder="Your email">
+        <button class="btn dark" data-id="Subscribe" data-en="Subscribe">Subscribe</button>
+      </form>
+    </section>
+  </main>
 
-<footer><div><a class="logo" href="#home">K<span>Studio</span></a><p>Soft knitwear for your everyday story.</p></div><div class="footer-links"><a href="#shop">Shop</a><a href="#promo">Promo</a><a href="#about">About</a><a href="#contact">Contact</a></div><small>© 2026 KStudio. All rights reserved.</small></footer>
+  <footer>
+    <div><a class="logo" href="#home">nindy<span>knity</span></a><p data-id="Modest wear untuk cerita sehari-harimu." data-en="Modest wear for your everyday story.">Modest wear untuk cerita sehari-harimu.</p></div>
+    <div class="footer-links"><a href="#shop">Shop</a><a href="#promo">Promo</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <small>© 2026 nindyknity. All rights reserved.</small>
+  </footer>
 
-<aside id="drawer" class="drawer"><div class="drawer-head"><h3>Your Bag</h3><button id="closeCart">×</button></div><div id="cartItems"></div><div class="cart-bottom"><div><span>Total</span><b id="total">Rp 0</b></div><button id="checkout" class="btn dark full">Checkout via WhatsApp</button></div></aside>
-<div id="overlay" class="overlay"></div>
-<a class="wa" href="https://wa.me/6285219577704?text=Halo%20kak%20aku%20mau%20pesan%20baju%20....%205%20pack%20ya" target="_blank" rel="noopener">WhatsApp <b>↗</b></a>
-<div id="toast" class="toast"></div>
-<script src="./script.js"></script>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-head"><h3 data-id="Keranjangmu" data-en="Your Bag">Keranjangmu</h3><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-list"></div>
+    <div class="cart-bottom"><div><span>Total</span><b id="total">Rp 0</b></div><button id="checkout" class="btn dark full" data-id="Checkout via WhatsApp" data-en="Checkout via WhatsApp">Checkout via WhatsApp</button></div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <a class="wa" href="https://wa.me/6285219577704?text=Halo%20kak%20aku%20mau%20pesan%20gamis%20....%205%20pack%20ya" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span>WhatsApp</span><b>↗</b>
+  </a>
+  <div class="toast" id="toast"></div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
